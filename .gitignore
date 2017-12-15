@@ -4,3 +4,4 @@
 !.profile
 !*.md
 !go
+!.bin
