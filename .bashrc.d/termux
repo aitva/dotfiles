@@ -1,9 +1,15 @@
+# home is not defined in termux
+export HOME=/home
+
+# variable for Golang dev
 export DEPNOLOCK=1
-export GOPATH=/home/go
+export GOPATH=$HOME/go
 export AITVA=$GOPATH/src/github.com/aitva
 export GRYZZLY=$GOPATH/src/github.com/aitva/bot
-export HOME=/home
+
+# global change
 export PATH=$GOPATH/bin:$HOME/.bin:$PATH
 export PS1='$(whoami)@$(hostname):$(pwd)$ '
 
+# aliases
 alias ll="ls -l"
