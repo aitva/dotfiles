@@ -1,0 +1,4 @@
+export GOPATH=/home/go
+export AITVA=$GOPATH/src/github.com/aitva
+export GRYZZLY=$GOPATH/src/github.com/aitva/bot
+export PATH=$GOPATH/bin:$HOME/.bin:$PATH

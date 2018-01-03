@@ -1,7 +1,9 @@
-*
-!.gitignore
-!.vimrc
-!.profile
-!*.md
-!go
-!.bin
+/*
+!/.gitignore
+!/.vimrc
+!/*.md
+
+/*/
+!/go/
+!/.bin/
+!/.bashrc.d/

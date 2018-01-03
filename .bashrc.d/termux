@@ -5,4 +5,5 @@ export GRYZZLY=$GOPATH/src/github.com/aitva/bot
 export HOME=/home
 export PATH=$GOPATH/bin:$HOME/.bin:$PATH
 export PS1='$(whoami)@$(hostname):$(pwd)$ '
+
 alias ll="ls -l"
