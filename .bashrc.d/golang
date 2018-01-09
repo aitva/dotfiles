@@ -1,3 +1,4 @@
+# This file contains environment variables for Golang development.
 export GOPATH=$HOME/go
 export AITVA=$GOPATH/src/github.com/aitva
 export GRYZZLY=$GOPATH/src/github.com/aitva/bot

@@ -3,12 +3,9 @@ export HOME=/home
 
 # variable for Golang dev
 export DEPNOLOCK=1
-export GOPATH=$HOME/go
-export AITVA=$GOPATH/src/github.com/aitva
-export GRYZZLY=$GOPATH/src/github.com/aitva/bot
+. golang
 
 # global change
-export PATH=$GOPATH/bin:$HOME/.bin:$PATH
 export PS1='$(whoami)@$(hostname):$(pwd)$ '
 
 # aliases
