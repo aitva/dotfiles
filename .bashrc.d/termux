@@ -3,7 +3,6 @@ export HOME=/home
 
 # variable for Golang dev
 export DEPNOLOCK=1
-. golang
 
 # global change
 export PS1='$(whoami)@$(hostname):$(pwd)$ '

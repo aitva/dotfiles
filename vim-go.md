@@ -10,3 +10,11 @@ Here is a list of shortcuts:
 - close error: `<super>-a`
 - go to definition: `ctrl-]`
 - return from definition: `ctrl-t` (`ctrl-o` for all jumps)
+- find callers: `:GoCallers`
+- find callees: `:GoCallees`
+
+Navigate location list:
+- next: `:lne`
+- prev: `:lN`
+- help: `:h location-list`
+
