@@ -37,10 +37,11 @@ config config status.showUntrackedFiles no
 
 ## Other
 
-Importing a file from `.bashrc.d`:
+To import file from `.bashrc.d` edit `.bashrc` and add:
 
 ```bash
-echo ". .bashrc.d/termux" >> .bashrc
+. ~/.bashrc.d/config
+. ~/.bashrc.d/golang
 ```
 
 Install `vim-go`:

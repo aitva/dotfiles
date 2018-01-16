@@ -4,6 +4,7 @@ set mouse=
 set encoding=utf-8
 
 " install vim-plug 
+" fail if curl is missing
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -11,7 +12,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " install plugins
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
