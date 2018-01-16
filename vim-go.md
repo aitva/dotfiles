@@ -1,6 +1,7 @@
 # vim-go Shortcuts
 
 This files contains usefull shortucts from the vim-go [tutorial](https://github.com/fatih/vim-go-tutorial).
+To install or update binaries: `:GoInstallBinaries` or `:GoUpdateBinaries`
 
 Here is a list of shortcuts:
 - build: `<super>-b`
@@ -18,3 +19,11 @@ Navigate location list:
 - prev: `:lN`
 - help: `:h location-list`
 
+Autocomplete:
+- hit `<C-X><C-O>` while typing
+- close preview-window hit `<C-W> z` while typing (`<C-W><C-Z` in normal mode)
+
+Navigate declarations:
+- type `:GoDecls` or `:GoDeclsDir` for a list of function & type
+- for next function hit `]]` in normal mode
+- for previous function hit `[[` in normal mode
