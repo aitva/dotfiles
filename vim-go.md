@@ -19,6 +19,11 @@ Navigate location list:
 - prev: `:lN`
 - help: `:h location-list`
 
+Navigate Quickfix:
+- next: `:cn`
+- prev: `:cp`
+- close: `:ccl``
+
 Autocomplete:
 - hit `<C-X><C-O>` while typing
 - close preview-window hit `<C-W> z` while typing (`<C-W><C-Z` in normal mode)
