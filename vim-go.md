@@ -26,9 +26,18 @@ Navigate Quickfix:
 
 Autocomplete:
 - hit `<C-X><C-O>` while typing
-- close preview-window hit `<C-W> z` while typing (`<C-W><C-Z` in normal mode)
+- close preview-window hit `<C-W> z` while typing (`<C-W><C-Z>` in normal mode)
 
 Navigate declarations:
 - type `:GoDecls` or `:GoDeclsDir` for a list of function & type
 - for next function hit `]]` in normal mode
 - for previous function hit `[[` in normal mode
+
+Navigate folders:
+- change dir with `:cd`
+- open explorer `:Ex`
+- open explorer in a tab `:Tex`
+- from the explorer:
+    - open a file in a tab `t`
+    - change view `i`
+    - sort file `s`
