@@ -3,6 +3,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set mouse=
 set encoding=utf-8
 set bg=dark
+set autochdir
 
 " install vim-plug 
 " fail if curl is missing
