@@ -23,6 +23,7 @@ Navigate location list:
 
 - next: `:lne`
 - prev: `:lN`
+- close: `:lcl`
 - help: `:h location-list`
 
 Navigate Quickfix:
@@ -83,4 +84,6 @@ Manage environment:
 
 - reload config: `:source-file ~/.tmux.conf` or `tmux source-file ~/.tmux.conf` or `prefix+r`
 - save environment: `prefix+ctrl+s`
-- restore environment: `prefix+ctrl+r
+- restore environment: `prefix+ctrl+r`
+
+Scroll: `prefix+[` and `q` to exit scroll mode
