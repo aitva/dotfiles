@@ -31,6 +31,7 @@ endif
 
 " vim-go settings from https://github.com/fatih/vim-go-tutorial
 let g:go_fmt_command = "goimports"
+let g:go_def_mode = 'godef'
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
