@@ -1,0 +1,9 @@
+# add the config command to the shell
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+
+# change the default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# add the .bin folder to the path
+export PATH=$HOME/.bin:$PATH

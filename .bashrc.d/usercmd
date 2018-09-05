@@ -1,2 +1,0 @@
-# add the .bin folder to the path
-export PATH=$HOME/.bin:$PATH
