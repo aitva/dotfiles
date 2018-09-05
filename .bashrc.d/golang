@@ -1,8 +1,4 @@
 # This file contains environment variables for Golang development.
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export AITVA=$GOPATH/src/github.com/aitva
-export LYSRT=$GOPATH/src/github.com/lysrt
-export BOT=$GOPATH/src/github.com/aitva/bot
-export CODEX=$GOPATH/src/github.com/codex-veritas
-export GRYZZLY=$GOPATH/src/github.com/gryzzlybot
-export PATH=$HOME/.bin:$GOPATH/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
