@@ -1,0 +1,8 @@
+# Here is a list of variable usefull for development.
+export BOT_DEBUG=1
+export REPORT_DEBUG=1
+
+# The following variables a secrets and should be
+# defined in .bashrc. They are not to be sync with git.
+#export BOT_SLACK_TOKEN=
+#export BOT_RECAST_TOKEN=
