@@ -16,6 +16,7 @@ endif
 " install plugins
 call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
@@ -29,6 +30,10 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
+" ale settings
+let g:ale_linters_explicit = 1
+let b:ale_linters = {'javascript': ['eslint']}
+
 " vim-go settings from https://github.com/fatih/vim-go-tutorial
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
@@ -37,9 +42,9 @@ map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
-au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " clang settings
 autocmd BufWritePre *.c 1,$!clang-format -style="{BasedOnStyle: llvm, IndentWidth: 4}"

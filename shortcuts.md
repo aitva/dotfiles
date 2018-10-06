@@ -56,7 +56,7 @@ Navigate folders:
 ## Tmux
 
 Below is a list of shortcuts for [tmux](https://github.com/tmux/tmux).
-The `prefix` is the shortcut `ctrl+a` and a command prompt can be open with `prefix+:`.
+The `prefix` is the shortcut `ctrl+b` and a command prompt can be open with `prefix+:`.
 
 Manage sessions:
 
