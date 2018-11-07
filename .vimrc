@@ -5,6 +5,12 @@ set encoding=utf-8
 set bg=dark
 set autochdir
 
+" wrap long lines in quickfix
+augroup quickfix
+    autocmd!
+    autocmd FileType qf setlocal wrap
+augroup END
+
 " install vim-plug 
 " fail if curl is missing
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -32,7 +38,15 @@ endif
 
 " ale settings
 let g:ale_linters_explicit = 1
-let b:ale_linters = {'javascript': ['eslint']}
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_fixers = {'javascript': ['standard']}
 
 " vim-go settings from https://github.com/fatih/vim-go-tutorial
 let g:go_fmt_command = "goimports"
@@ -45,6 +59,9 @@ autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
+
+" js settings
+autocmd BufNewFile,BufRead *.js setlocal expandtab tabstop=2 shiftwidth=2
 
 " clang settings
 autocmd BufWritePre *.c 1,$!clang-format -style="{BasedOnStyle: llvm, IndentWidth: 4}"

@@ -15,6 +15,7 @@ General shortcuts:
 - previous error: `ctrl-m`
 - close error: `<super>-a`
 - go to definition: `ctrl-]`
+- open definition in another tab: `ctrl-w ctrl-] ctrl-w ctrl-T`
 - return from definition: `ctrl-t` (`ctrl-o` for all jumps)
 - find callers: `:GoCallers`
 - find callees: `:GoCallees`
@@ -30,7 +31,8 @@ Navigate Quickfix:
 
 - next: `:cn`
 - prev: `:cp`
-- close: `:ccl``
+- close: `:ccl`
+- back to code: `ctrl-O`
 
 Autocomplete:
 
@@ -73,6 +75,7 @@ Manage windows:
 - rename a window: `prefix+,`
 - close current window: `prefix+&`
 - previous & next window: `prefix+p` and `prefix+n`
+- swap windows: `prefix+:` and `swap-window -t -1`
 
 Manage plugins:
 
