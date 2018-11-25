@@ -32,7 +32,7 @@ Cloning into a separate folder:
 git clone --separate-git-dir=$HOME/.myconf git@github.com:aitva/dotfiles.git $HOME/myconf-tmp
 cp -ri $HOME/myconf-tmp/. $HOME
 rm -rf $HOME/myconf-tmp
-config config status.showUntrackedFiles no
+git --git-dir=$HOME/.myconf/ --work-tree=$HOME config status.showUntrackedFiles no
 ```
 
 ## Other
@@ -40,18 +40,6 @@ config config status.showUntrackedFiles no
 To import file from `.bashrc.d` edit `.bashrc` and add:
 
 ```bash
-. ~/.bashrc.d/config
+. ~/.bashrc.d/default
 . ~/.bashrc.d/golang
-```
-
-Install `vim-go`:
-
-```bash
-git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
-```
-
-Install `dep`:
-
-```bash
-go get -u github.com/golang/dep/cmd/dep
 ```
