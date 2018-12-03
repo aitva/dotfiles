@@ -1,4 +1,5 @@
 # Here is a list of variable usefull for development.
+export GRYZZLY=${GOPATH}/src/gitlab.com/gryzzlybot
 export BOT_DEBUG=1
 export REPORT_DEBUG=1
 

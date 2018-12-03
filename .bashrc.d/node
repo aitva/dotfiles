@@ -1,4 +1,4 @@
 # This file contains variables for Node development.
-export NPM_CONFIG_PREFIX=$HOME/node
+export NPM_CONFIG_PREFIX=$HOME/.cache/node
 export NODEROOT=/usr/local/node
 export PATH=$NPM_CONFIG_PREFIX/bin:$NODEROOT/bin:$PATH
