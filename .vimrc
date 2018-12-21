@@ -48,6 +48,9 @@ let g:ale_linters = {
 \}
 let g:ale_fixers = {'javascript': ['standard']}
 
+" disable safe write for webpack
+autocmd BufRead,BufNewFile *.js set backupcopy=yes
+
 " vim-go settings from https://github.com/fatih/vim-go-tutorial
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'

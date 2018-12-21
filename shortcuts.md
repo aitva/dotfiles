@@ -90,3 +90,13 @@ Manage environment:
 - restore environment: `prefix+ctrl+r`
 
 Scroll: `prefix+[` and `q` to exit scroll mode
+
+## Git
+
+Working with branch:
+
+- checkout a new branch: `git checkout -b new-branch`
+- push a new branch to remote: `git push --set-upstream origin new-branch`
+- delete a local branch: `git branch -d local-branch`
+- delete a remote branch: `git push --delete origin remote-branch`
+- fetch deleted branch from origin: `git fetch --prune`
