@@ -21,7 +21,7 @@ endif
 
 " install plugins
 call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
@@ -46,7 +46,9 @@ let g:ale_fix_on_save = 1
 let g:ale_linters = {
 \   'javascript': ['standard'],
 \}
-let g:ale_fixers = {'javascript': ['standard']}
+let g:ale_fixers = {
+\   'javascript': ['standard'],
+\}
 
 " disable safe write for webpack
 autocmd BufRead,BufNewFile *.js set backupcopy=yes
