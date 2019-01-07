@@ -55,6 +55,12 @@ Navigate folders:
     - change view `i`
     - sort file `s`
 
+Change the text case:
+
+- to lowercase `gu`
+- to uppercase `gU`
+- to toggle the case `g~`
+
 ## Tmux
 
 Below is a list of shortcuts for [tmux](https://github.com/tmux/tmux).
@@ -95,6 +101,7 @@ Scroll: `prefix+[` and `q` to exit scroll mode
 
 Working with branch:
 
+- checkout a remote branch: `git checkout remote-branch`
 - checkout a new branch: `git checkout -b new-branch`
 - push a new branch to remote: `git push --set-upstream origin new-branch`
 - delete a local branch: `git branch -d local-branch`
