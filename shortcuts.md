@@ -15,7 +15,7 @@ General shortcuts:
 - previous error: `ctrl-m`
 - close error: `<super>-a`
 - go to definition: `ctrl-]`
-- open definition in another tab: `ctrl-w ctrl-] ctrl-w ctrl-T`
+- open definition in another tab: `ctrl-w ctrl-] ctrl-w shift-t`
 - return from definition: `ctrl-t` (`ctrl-o` for all jumps)
 - find callers: `:GoCallers`
 - find callees: `:GoCallees`
