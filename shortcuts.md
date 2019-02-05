@@ -61,6 +61,10 @@ Change the text case:
 - to uppercase `gU`
 - to toggle the case `g~`
 
+Search and replace:
+
+- select inside a function: `vif`
+
 ## Tmux
 
 Below is a list of shortcuts for [tmux](https://github.com/tmux/tmux).
