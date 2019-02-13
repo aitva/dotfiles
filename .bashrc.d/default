@@ -7,3 +7,6 @@ export EDITOR="$VISUAL"
 
 # add the .bin folder to the path
 export PATH=$HOME/.bin:$PATH
+
+# force UTF-8 for GNOME shell
+export LANG=en_US.UTF-8

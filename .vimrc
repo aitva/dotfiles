@@ -1,4 +1,4 @@
-" global vim settings
+" Global vim settings
 set tabstop=4 shiftwidth=4 expandtab
 set mouse=
 set encoding=utf-8
@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " enable keyboard arrows when using tmux
@@ -44,14 +45,13 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
-\   'javascript': ['standard'],
+\   'javascript': ['prettier'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['standard'],
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
 \}
-
-" disable safe write for webpack
-autocmd BufRead,BufNewFile *.js set backupcopy=yes
 
 " vim-go settings from https://github.com/fatih/vim-go-tutorial
 let g:go_fmt_command = "goimports"
@@ -67,6 +67,8 @@ autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " js settings
 autocmd BufNewFile,BufRead *.js setlocal expandtab tabstop=2 shiftwidth=2
+" disable safe write for webpack
+autocmd BufRead,BufNewFile *.js set backupcopy=yes
 
 " clang settings
 autocmd BufWritePre *.c 1,$!clang-format -style="{BasedOnStyle: llvm, IndentWidth: 4}"
