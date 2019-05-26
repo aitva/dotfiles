@@ -65,6 +65,11 @@ Search and replace:
 
 - select inside a function: `vif`
 
+Emmet:
+
+- execute instruction: `<c-y>,`
+- create a list: `ul>li*5`
+
 ## Tmux
 
 Below is a list of shortcuts for [tmux](https://github.com/tmux/tmux).
