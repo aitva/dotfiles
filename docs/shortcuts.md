@@ -71,6 +71,11 @@ Work with mark:
 - go to the line of a mark: `'[a-zA-Z]`
 - go to exact position of a mark: `` `[a-zA-Z] ``
 
+Emmet:
+
+- execute instruction: `<c-y>,`
+- create a list: `ul>li*5`
+
 ## Tmux
 
 Below is a list of shortcuts for [tmux](https://github.com/tmux/tmux).

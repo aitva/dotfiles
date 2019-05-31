@@ -41,5 +41,5 @@ To import file from `.bashrc.d` edit `.bashrc` and add:
 
 ```bash
 . ~/.bashrc.d/default
-. ~/.bashrc.d/golang
+. ~/.bashrc.d/go
 ```
