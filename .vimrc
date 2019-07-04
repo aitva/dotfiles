@@ -24,6 +24,8 @@ Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " enable keyboard arrows when using tmux
