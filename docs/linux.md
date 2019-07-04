@@ -1,6 +1,8 @@
 # Linux
 
-This file contains information on Linux permission and user:
+This file contains information on Linux system.
+
+## User and permission
 
 - bind privileged port as non-root user: `setcap 'cap_net_bind_service=+ep' /usr/local/bin/caddy`
 - create a system user: `useradd \
@@ -12,3 +14,10 @@ This file contains information on Linux permission and user:
 - force a group recursively: `find /var/www -type d -exec chmod g+s {} +`
 - force permission on files: `setfacl -m "default:group::rwx" /var/www`
 - force permission on files recursively: `find /var/www -type d -exec setfacl -m d:g::rwx {} +`
+
+## Logs
+
+- to read journalctl log for non root user: `adduser aitva systemd-journal`
+- to read syslog from `/var/log`: `adduser aitva adm`
+- to filter a syslog journal per process: `cat syslog | awk '$5 ~ /^myapp/' | less -S`
+- to unzip and filter archived logs: `gunzip --stdout syslog.4.gz | awk '$5 ~ /^monitor/' | less -S`

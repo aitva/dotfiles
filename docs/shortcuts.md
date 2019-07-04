@@ -65,6 +65,12 @@ Search and replace:
 
 - select inside a function: `vif`
 
+Work with mark:
+
+- add a mark: `m[a-zA-Z]`
+- go to the line of a mark: `'[a-zA-Z]`
+- go to exact position of a mark: `` `[a-zA-Z] ``
+
 Emmet:
 
 - execute instruction: `<c-y>,`
