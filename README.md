@@ -1,11 +1,11 @@
 # dotfiles
 
-This repo contains my dotfiles. I use it to share my config with all my computers.
+This repo contains my dotfiles. I use it to share configs between my computers.
 I have created the repo using the advice at: https://news.ycombinator.com/item?id=11071754
 
 ## Initialization
 
-The following command are use to create a new repo:
+The following commands are used to create a new repo:
 
 ```bash
 git init --bare $HOME/.myconf
@@ -13,7 +13,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 config config status.showUntrackedFiles no
 ```
 
-Then you can use git as:
+Then you can sync and edit the dotfile as follow:
 
 ```bash
 config status
@@ -26,7 +26,7 @@ config push
 
 ## Replicate onto a new machine
 
-Cloning into a separate folder:
+The following commands duplicated the dotfiles on a new computer:
 
 ```bash
 git clone --separate-git-dir=$HOME/.myconf git@github.com:aitva/dotfiles.git $HOME/myconf-tmp
