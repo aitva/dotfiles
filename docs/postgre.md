@@ -15,3 +15,16 @@ to the database with `sudo -u postgres psql`.
 
 - list tables `\d`
 - list roles `\dg`
+
+## UUID
+
+There is an UUID type in Postgre. They can be generated
+using the _pgcrypto_ module and declared as such:
+
+```SQL
+CREATE TABLE contacts(
+   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+   name TEXT,
+   email TEXT
+);
+```
