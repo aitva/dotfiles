@@ -28,3 +28,5 @@ CREATE TABLE contacts(
    email TEXT
 );
 ```
+
+See https://www.starkandwayne.com/blog/uuid-primary-keys-in-postgresql/
