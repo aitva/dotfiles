@@ -13,5 +13,7 @@ to the database with `sudo -u postgres psql`.
 
 ## Commands
 
-- list tables `\d`
-- list roles `\dg`
+- list roles: `\du`
+- list databases: `\l`
+- change database: `\c`
+- list tables: `\dt`
