@@ -17,3 +17,18 @@ to the database with `sudo -u postgres psql`.
 - list databases: `\l`
 - change database: `\c`
 - list tables: `\dt`
+
+## UUID
+
+There is an UUID type in Postgre. They can be generated
+using the _pgcrypto_ module and declared as such:
+
+```SQL
+CREATE TABLE contacts(
+   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+   name TEXT,
+   email TEXT
+);
+```
+
+See https://www.starkandwayne.com/blog/uuid-primary-keys-in-postgresql/
