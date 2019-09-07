@@ -3,6 +3,15 @@ export GRYZZLY=${GOPATH}/src/gitlab.com/gryzzlybot
 export BOT_DEBUG=1
 export REPORT_DEBUG=1
 
+# The following variables are used for database configuration
+# in Gryzzly CLIs.
+export DB_HOST=localhost
+export DB_USERNAME=pizzly
+export DB_PASSWORD=pizzly
+export API_DB_HOST=$DB_HOST
+export API_DB_USER=$DB_USERNAME
+export API_DB_PASS=$DB_PASSWORD
+
 # The following variables a secrets and should be
 # defined in .bashrc. They are not to be sync with git.
 #export BOT_SLACK_TOKEN=
