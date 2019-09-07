@@ -17,6 +17,7 @@ to the database with `sudo -u postgres psql`.
 - list databases: `\l`
 - change database: `\c`
 - list tables: `\dt`
+- toggle result display: `\x`
 
 ## UUID
 
@@ -32,3 +33,8 @@ CREATE TABLE contacts(
 ```
 
 See https://www.starkandwayne.com/blog/uuid-primary-keys-in-postgresql/
+
+## Timestamps
+
+Beware, most timestamp function are indexed onto the transaction timestamp.
+For a timestamp indexed on the clock use `clock_timestamp()`.
