@@ -1,7 +1,7 @@
 setl tabstop=4
 setl shiftwidth=4
 
-let b:ale_linters = ['gopls']
+let b:ale_linters = ['gopls', 'golint']
 let b:ale_fixers = ['goimports']
 nmap <buffer> <C-]> <Plug>(ale_go_to_definition)
 nmap <buffer> <C-k> <Plug>(ale_previous_wrap)

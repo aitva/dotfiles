@@ -2,6 +2,11 @@
 
 This file contains information on Linux system.
 
+## sshd
+
+- allow root login with key only add `PermitRootLogin without-password` to `/etc/ssh/sshd_config`
+- connect to a server with public key disable `ssh -o PubkeyAuthentication=no example.org`
+
 ## User and permission
 
 - bind privileged port as non-root user: `setcap 'cap_net_bind_service=+ep' /usr/local/bin/caddy`
