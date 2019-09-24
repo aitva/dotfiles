@@ -26,3 +26,12 @@ This file contains information on Linux system.
 - to read syslog from `/var/log`: `adduser aitva adm`
 - to filter a syslog journal per process: `cat syslog | awk '$5 ~ /^myapp/' | less -S`
 - to unzip and filter archived logs: `gunzip --stdout syslog.4.gz | awk '$5 ~ /^monitor/' | less -S`
+
+## BASH
+
+- get the directory of a script: `DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"`
+
+## Docker
+
+- mount a volume in a container: `docker run -v $(pwd)/my/folder:/docker/folder postgres:11`
+- exit a container started with `-ti`: `ctrl+p,ctrl+q`

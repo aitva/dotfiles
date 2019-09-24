@@ -5,12 +5,17 @@ export REPORT_DEBUG=1
 
 # The following variables are used for database configuration
 # in Gryzzly CLIs.
+export DB_TEST_HOST=localhost
+export DB_TEST_USER=pizzly_test
+export DB_TEST_PASS=pizzly_test
+
 export DB_HOST=localhost
-export DB_USERNAME=pizzly
-export DB_PASSWORD=pizzly
+export DB_USER=pizzly
+export DB_PASS=pizzly
+
 export API_DB_HOST=$DB_HOST
-export API_DB_USER=$DB_USERNAME
-export API_DB_PASS=$DB_PASSWORD
+export API_DB_USER=$DB_USER
+export API_DB_PASS=$DB_PASS
 
 # The following variables a secrets and should be
 # defined in .bashrc. They are not to be sync with git.
