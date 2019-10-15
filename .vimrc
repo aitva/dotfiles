@@ -18,6 +18,12 @@ filetype indent on
 " more details
 set backspace=2
 
+" default to 4 spaces tab expanded to spaces
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
 " enable keyboard arrows when using tmux
 " https://superuser.com/a/402084
 if &term =~ '^screen'
@@ -51,6 +57,7 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
+command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"
 
 " insert UUID using <C-u>
 nnoremap <C-u> i<C-r>=system('uuidgen')[:-2]<CR><Esc>
