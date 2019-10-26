@@ -46,7 +46,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
-Plug 'govim/govim'
+"Plug 'govim/govim'
 call plug#end()
 
 " configure ALE
@@ -59,5 +59,5 @@ let g:ale_set_highlights = 0
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"
 
-" insert UUID using <C-u>
-nnoremap <C-u> i<C-r>=system('uuidgen')[:-2]<CR><Esc>
+" insert UUID using :UUID
+command UUID :normal i<C-r>=system('uuidgen')[:-2]<CR><Esc>
