@@ -5,7 +5,7 @@ This is a memo on how to change the default theme in Gnome Terminal.
 ## Installing new themes
 
 Install [Gosh](https://github.com/Mayccoll/Gogh/) from Mayccoll and pick a theme.
-The one I enjoy the most to work with VIM and Termux are : dark-pastel and elemental.
+The ones I enjoy the most to work with VIM and Termux are : dark-pastel and elemental.
 
 ## Removing themes
 
