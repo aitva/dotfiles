@@ -30,13 +30,12 @@ Manage plugins:
 - update plugins: `prefix+U`
 - uninstall plugins: `prefix+alt+u`
 
-Manage environment:
+Scroll mode:
 
-- reload config: `:source-file ~/.tmux.conf` or `tmux source-file ~/.tmux.conf` or `prefix+r`
-- save environment: `prefix+ctrl+s`
-- restore environment: `prefix+ctrl+r`
-
-Scroll: `prefix+[` and `q` to exit scroll mode
+- enter: `prefix+[`
+- exit: `q`
+- select: `<space>`
+- copy: `<enter>`
 
 ## Git
 
