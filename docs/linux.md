@@ -35,7 +35,3 @@ This file contains information on Linux system.
 
 - mount a volume in a container: `docker run -v $(pwd)/my/folder:/docker/folder postgres:11`
 - exit a container started with `-ti`: `ctrl+p,ctrl+q`
-
-## Git
-
-- see file history of change: `git log -p -- <file>`

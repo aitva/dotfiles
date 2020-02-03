@@ -46,6 +46,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
+Plug 'leafgarland/typescript-vim'
 "Plug 'govim/govim'
 call plug#end()
 

@@ -48,3 +48,8 @@ Working with branch:
 - delete a local branch: `git branch -d local-branch`
 - delete a remote branch: `git push --delete origin remote-branch`
 - fetch deleted branch from origin: `git fetch --prune`
+
+Other:
+
+- see file history of change: `git log -p -- <file>`
+- skip CI in Gitlab: `git push -o ci.skip`
