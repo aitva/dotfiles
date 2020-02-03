@@ -3,6 +3,16 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Enable keyboard arrows when using tmux
+" https://superuser.com/a/402084
+if &term =~ '^screen'
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
+
 " Install vim-plug. Fail if curl is missing.
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -26,7 +36,7 @@ set bg=dark
 set encoding=utf-8
 
 " change current directory to the buffer's directory
-"set autochdir
+set autochdir
 
 " Turn on auto-indenting.
 set autoindent
@@ -56,6 +66,10 @@ set ruler
 set cc=80
 set nowrap
 
+" Set hidden char symbols.
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,space:.
+
 " Ctrl+c to exit commands.
 inoremap <C-c> <ESC>
 " Ex mode is fucking dumb.
@@ -70,10 +84,28 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
-let g:ale_set_highlights = 0
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
-command! ALEToggleFixer execute
-    \ "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"
+let g:ale_completion_tsserver_autoimport = 1
+let g:ale_completion_enabled = 1
+
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\  'typescript': ['eslint'],
+\  'go': ['goimports'],
+\}
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\  'typescript': ['tsserver', 'eslint'],
+\  'go': ['gopls', 'golangci-lint'],
+\}
+
+nmap <silent> <C-]>     <Plug>(ale_go_to_definition)
+nmap <silent> <C-k>     <Plug>(ale_previous_wrap)
+nmap <silent> <C-j>     <Plug>(ale_next_wrap)
+nmap <silent> <leader>i <Plug>(ale_hover)
+
+set omnifunc=ale#completion#OmniFunc
+
 
 " Preferences for various file formats
 autocmd FileType c setlocal noet ts=4 sw=4 tw=80
