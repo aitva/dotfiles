@@ -1,4 +1,6 @@
 set nocompatible
+
+" Don't litter with swap files and backups
 set nobackup
 set nowritebackup
 set noswapfile
@@ -25,7 +27,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
 Plug 'leafgarland/typescript-vim'
-"Plug 'govim/govim'
 call plug#end()
 
 " Force 256 colors and dark background.
@@ -87,16 +88,16 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_tsserver_autoimport = 1
 let g:ale_completion_enabled = 1
 
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\  'typescript': ['tsserver', 'eslint'],
+\  'go': ['gopls', 'golangci-lint'],
+\}
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'javascript': ['eslint'],
 \  'typescript': ['eslint'],
 \  'go': ['goimports'],
-\}
-let g:ale_linters = {
-\  'javascript': ['eslint'],
-\  'typescript': ['tsserver', 'eslint'],
-\  'go': ['gopls', 'golangci-lint'],
 \}
 
 nmap <silent> <C-]>     <Plug>(ale_go_to_definition)
