@@ -26,12 +26,19 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
+" Syntax highlighting
 Plug 'leafgarland/typescript-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Force 256 colors and dark background.
 set t_Co=256
 set bg=dark
+
+" Configure Markdown scheme
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_frontmatter=1
 
 " Force utf-8 encoding.
 set encoding=utf-8
@@ -67,6 +74,9 @@ set ruler
 set cc=80
 set nowrap
 
+" Open split below.
+set splitbelow
+
 " Set hidden char symbols.
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,space:.
@@ -86,7 +96,8 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_tsserver_autoimport = 1
-let g:ale_completion_enabled = 1
+"let g:ale_completion_enabled = 1
+let g:ale_go_golangci_lint_options = ''
 
 let g:ale_linters = {
 \  'javascript': ['eslint'],
@@ -121,3 +132,30 @@ autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
 autocmd FileType text setlocal tw=80
 autocmd FileType typescript setlocal et ts=2 sw=2
 autocmd FileType python setlocal et ts=4 sw=4
+
+" Colorscheme
+syntax enable
+colorscheme ron
+highlight Search ctermbg=12
+highlight NonText ctermfg=darkgrey
+highlight SpecialKey ctermfg=darkgrey
+highlight clear SignColumn
+highlight Comment cterm=bold ctermfg=none
+highlight StatusLine cterm=none ctermbg=none ctermfg=darkgrey
+highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
+highlight Title cterm=none ctermfg=darkgrey
+highlight TabLineFill cterm=none
+highlight TabLine cterm=none ctermfg=darkgrey ctermbg=none
+highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
+highlight jsParensError ctermbg=NONE
+highlight Todo ctermbg=NONE ctermfg=red cterm=bold
+highlight PreProc ctermfg=grey
+highlight String ctermfg=darkblue cterm=italic
+highlight Type ctermfg=darkblue
+highlight lineNr ctermfg=grey cterm=italic
+highlight cIncluded ctermfg=NONE cterm=bold
+highlight pythonInclude ctermfg=blue
+highlight pythonConditional ctermfg=darkcyan
+highlight pythonBuiltin ctermfg=darkcyan
+highlight Pmenu ctermbg=white ctermfg=black
+highlight PmenuSel ctermbg=darkcyan ctermfg=black

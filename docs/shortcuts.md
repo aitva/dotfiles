@@ -52,3 +52,5 @@ Other:
 
 - see file history of change: `git log -p -- <file>`
 - skip CI in Gitlab: `git push -o ci.skip`
+- diff between two branch: `git diff branch1 branch2 -- path/to/file`
+- checkout file from a branch: `git checkout branch1 path/to/file`
