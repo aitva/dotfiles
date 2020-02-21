@@ -116,6 +116,7 @@ nmap <silent> <C-k>     <Plug>(ale_previous_wrap)
 nmap <silent> <C-j>     <Plug>(ale_next_wrap)
 nmap <silent> <leader>i <Plug>(ale_hover)
 
+set completeopt=menu,menuone,preview,noselect,noinsert
 set omnifunc=ale#completion#OmniFunc
 
 
@@ -150,7 +151,7 @@ highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
 highlight jsParensError ctermbg=NONE
 highlight Todo ctermbg=NONE ctermfg=red cterm=bold
 highlight PreProc ctermfg=grey
-highlight String ctermfg=darkblue cterm=italic
+"highlight String ctermfg=darkblue cterm=italic
 highlight Type ctermfg=darkblue
 highlight lineNr ctermfg=grey cterm=italic
 highlight cIncluded ctermfg=NONE cterm=bold
