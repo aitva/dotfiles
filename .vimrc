@@ -160,3 +160,8 @@ highlight pythonConditional ctermfg=darkcyan
 highlight pythonBuiltin ctermfg=darkcyan
 highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=darkcyan ctermfg=black
+
+" Enable copy in hterm / Secure Shell.
+if !empty($HTERM)
+    vmap <C-c> y:call osc52#send(getreg('"'))<cr>
+endif
