@@ -95,29 +95,9 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
-let g:ale_completion_tsserver_autoimport = 1
-"let g:ale_completion_enabled = 1
-let g:ale_go_golangci_lint_options = ''
-
-let g:ale_linters = {
-\  'javascript': ['eslint'],
-\  'typescript': ['tsserver', 'eslint'],
-\  'go': ['gopls', 'golangci-lint'],
-\}
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  'javascript': ['eslint'],
-\  'typescript': ['eslint'],
-\  'go': ['goimports'],
 \}
-
-nmap <silent> <C-]>     <Plug>(ale_go_to_definition)
-nmap <silent> <C-k>     <Plug>(ale_previous_wrap)
-nmap <silent> <C-j>     <Plug>(ale_next_wrap)
-nmap <silent> <leader>i <Plug>(ale_hover)
-
-set completeopt=menu,menuone,preview,noselect,noinsert
-set omnifunc=ale#completion#OmniFunc
 
 
 " Preferences for various file formats
@@ -163,5 +143,5 @@ highlight PmenuSel ctermbg=darkcyan ctermfg=black
 
 " Enable copy in hterm / Secure Shell.
 if !empty($HTERM)
-    vmap <C-c> y:call osc52#send(getreg('"'))<cr>
+    vmap <C-y> y:call osc52#send(getreg('"'))<cr>
 endif
