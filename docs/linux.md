@@ -5,6 +5,7 @@ This file contains information on Linux system.
 ## sshd
 
 - allow root login with key only add `PermitRootLogin without-password` to `/etc/ssh/sshd_config`
+  Note: `without-password` is deprecated and must be replaced by `prohibit-password`
 - connect to a server with public key disable `ssh -o PubkeyAuthentication=no example.org`
 
 ## User and permission
