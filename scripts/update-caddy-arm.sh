@@ -14,7 +14,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 URL="https://github.com/caddyserver/caddy/releases/download"
-URL+="/v${VERSION}/caddy_${VERSION}_Linux_arm64.tar.gz"
+URL+="/v${VERSION}/caddy_${VERSION}_linux_arm64.tar.gz"
 
 curl --location --silent $URL -o caddy.tgz
 if [ -d $INSTALLDIR ]; then
