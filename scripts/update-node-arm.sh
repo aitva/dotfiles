@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 INSTALLDIR="/usr/local"
 NODEROOT="$INSTALLDIR/node"
@@ -20,6 +21,7 @@ curl --location --silent \
 if [ -d $NODEROOT ]; then
     rm -rf $NODEROOT
 fi
+# If it fails xz-utils might not be install on your system.
 tar -C $INSTALLDIR -xf node.tgz
 mv $INSTALLDIR/node* $NODEROOT
 
