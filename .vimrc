@@ -26,10 +26,12 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-fugitive'
 " Syntax highlighting
 Plug 'leafgarland/typescript-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
 call plug#end()
 
 " Force 256 colors and dark background.

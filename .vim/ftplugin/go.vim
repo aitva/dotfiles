@@ -8,8 +8,8 @@ nmap <silent> <C-k>     <Plug>(ale_previous_wrap)
 nmap <silent> <C-j>     <Plug>(ale_next_wrap)
 nmap <silent> <leader>i <Plug>(ale_hover)
 
-set completeopt=menu,menuone,preview,noselect,noinsert
-set omnifunc=ale#completion#OmniFunc
+setl completeopt=menu,menuone,preview,noselect,noinsert
+setl omnifunc=ale#completion#OmniFunc
 
 
 " GoVim config
