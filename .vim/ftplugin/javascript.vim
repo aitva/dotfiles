@@ -1,5 +1,5 @@
 let b:ale_linters = ['tsserver', 'eslint']
-let b:ale_fixers = ['eslint', 'prettier']
+let b:ale_fixers = ['eslint']
 let b:ale_completion_enabled = 1
 let b:ale_completion_tsserver_autoimport = 1
 
