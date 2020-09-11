@@ -1,6 +1,7 @@
 #!/bin/bash
 
-INSTALLDIR="/usr/local/caddy"
+INSTALLDIR="$HOME/.bin"
+BINARYPATH="$INSTALLDIR/caddy"
 
 VERSION=$1
 if [ -z $VERSION ]; then
@@ -8,21 +9,14 @@ if [ -z $VERSION ]; then
     exit 1
 fi
 
-if [ "$EUID" -ne 0 ]; then
-    echo "this script should be run as root"
-    exit 1
-fi
-
 URL="https://github.com/caddyserver/caddy/releases/download"
 URL+="/v${VERSION}/caddy_${VERSION}_linux_arm64.tar.gz"
 
 curl --location --silent $URL -o caddy.tgz
-if [ -d $INSTALLDIR ]; then
-    rm -rf $INSTALLDIR
+if [ -f $BINARYPATH ]; then
+    rm $BINARYPATH
 fi
+tar -C $INSTALLDIR -xf caddy.tgz caddy
 
-mkdir $INSTALLDIR
-tar -C $INSTALLDIR -xf caddy.tgz
 rm caddy.tgz
-
-$INSTALLDIR/caddy version
+$BINARYPATH version
