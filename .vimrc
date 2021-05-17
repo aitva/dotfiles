@@ -32,6 +32,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+Plug 'b0o/builder.vim'
 Plug 'b0o/quicktemplate.vim'
 call plug#end()
 
