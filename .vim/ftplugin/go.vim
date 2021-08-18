@@ -2,6 +2,7 @@
 let b:ale_linters = ['gopls', 'golangci-lint']
 let b:ale_fixers = ['goimports']
 let b:ale_go_golangci_lint_options = ''
+let g:ale_go_golangci_lint_package = 1
 
 nmap <silent> <C-]>     <Plug>(ale_go_to_definition)
 nmap <silent> <C-k>     <Plug>(ale_previous_wrap)

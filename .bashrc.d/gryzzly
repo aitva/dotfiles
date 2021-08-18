@@ -13,9 +13,9 @@ export API_DB_HOST=localhost
 export API_DB_USER=pizzly
 export API_DB_PASS=pizzly
 
-export BOT_DB_HOST=$API_DB_HOST
-export BOT_DB_USER=$API_DB_USER
-export BOT_DB_PASS=$API_DB_PASS
+export BOT_DB_HOST=localhost
+export BOT_DB_USER=bot
+export BOT_DB_PASS=bot
 
 # The following variables a secrets and should be
 # defined in .bashrc. They are not to be sync with git.
