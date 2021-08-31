@@ -1,0 +1,6 @@
+[user]
+    name = aitva
+    email = aitva@pm.me
+
+[includeIf "gitdir:~/dev/gryzzly/"]
+    path = ~/dev/gryzzly/.gitconfig
