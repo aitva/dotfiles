@@ -13,3 +13,5 @@
 
 [includeIf "gitdir:~/dev/gryzzly/"]
     path = ~/dev/gryzzly/.gitconfig
+[pull]
+	rebase = true
