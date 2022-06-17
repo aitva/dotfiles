@@ -1,0 +1,11 @@
+
+http://localhost:8080 {
+	file_server * browse
+
+	@markdown path *.md
+	handle @markdown {
+		header Content-Type text/html
+		templates
+		rewrite * index.tmpl
+	}
+}

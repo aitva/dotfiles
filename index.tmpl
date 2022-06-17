@@ -1,0 +1,16 @@
+{{- $path := .OriginalReq.URL.Path -}}
+{{- $content := "" -}}
+{{- if (fileExists $path) }}{{ $content = (include $path) }}{{ end -}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{$path}}</title>
+		<meta property="og:title" content="{{$path}}">
+		<meta name="twitter:title" value="{{$path}}">
+	</head>
+	<body>
+		<main>
+			{{ markdown $content }}
+		</main>
+	</body>
+</html>
