@@ -73,9 +73,9 @@ set laststatus=2
 " case set signcolumn=number
 set signcolumn=yes
 
-" Set a red column at 80 chars.
+" Set a red column at 81 chars.
 set ruler
-set cc=80
+set cc=81
 set nowrap
 
 " Open split below.

@@ -15,3 +15,11 @@
     path = ~/dev/gryzzly/.gitconfig
 [pull]
 	rebase = true
+[core]
+	quotePath = false
+	commitGraph = true
+[receive]
+	advertisePushOptions = true
+	procReceiveRefs = refs/for
+[gc]
+	writeCommitGraph = true
