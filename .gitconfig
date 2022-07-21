@@ -23,3 +23,5 @@
 	procReceiveRefs = refs/for
 [gc]
 	writeCommitGraph = true
+[tag]
+	sort = -version:refname
