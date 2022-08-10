@@ -3,15 +3,41 @@
 {{- if (fileExists $path) }}{{ $content = (include $path) }}{{ end -}}
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{$path}}</title>
-		<meta property="og:title" content="{{$path}}">
-		<meta name="twitter:title" value="{{$path}}">
+    <head>
+        <title>{{$path}}</title>
+        <meta property="og:title" content="{{$path}}">
+        <meta name="twitter:title" value="{{$path}}">
         <meta charset="utf-8">
-	</head>
-	<body>
-		<main>
-			{{ markdown $content }}
-		</main>
-	</body>
+        <style>
+        h1, h2, h3, h4, h5 { color: #5800b0; }
+        a { color: #5800B0; }
+        a:hover { color: #7112FC; }
+        main {
+            max-width: 80ch;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #ffece2;
+            box-shadow: 0 0 0 0.5em #ffece2;
+        }
+        pre code {
+            background-color: unset;
+            box-shadow: unset;
+        }
+        code {
+            background-color: #ffece2;
+            box-shadow: 0 0 0 0.2em #ffece2;
+        }
+        blockquote {
+            margin: 0;
+            padding-left: 0.5em;
+            border-left: 0.2em solid #5800b0;
+        }
+        </style>
+    </head>
+    <body>
+        <main>
+            {{ markdown $content }}
+        </main>
+    </body>
 </html>
