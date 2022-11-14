@@ -1,27 +1,47 @@
 [user]
-    name = aitva
-    email = aitva@pm.me
+	name = aitva
+	email = aitva@pm.me
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNLO2799Ru+W/qLPXcPCOhVujNqIBp7dFCNrXyijT5d
 
-[url "git@gitlab.com:"]
-    insteadOf = https://gitlab.com/
+[gpg]
+	format = ssh
 
-[url "git@github.com:"]
-    insteadOf = https://github.com/
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
 
-[url "git@git.sr.ht:"]
-    insteadOf = https://git.sr.ht/
+[commit]
+	gpgsign = true
+
+[url "git@gitlab.com:gryzzlybot/"]
+	insteadOf = https://gitlab.com/gryzzlybot/
+
+[url "git@github.com:aitva/"]
+	insteadOf = https://github.com/aitva/
+
+[url "git@git.sr.ht:~aitva/"]
+	insteadOf = https://git.sr.ht/~aitva/
 
 [includeIf "gitdir:~/dev/gryzzly/"]
-    path = ~/dev/gryzzly/.gitconfig
+	path = ~/dev/gryzzly/.gitconfig
+
 [pull]
 	rebase = true
+
 [core]
 	quotePath = false
 	commitGraph = true
+
 [receive]
 	advertisePushOptions = true
 	procReceiveRefs = refs/for
+
 [gc]
 	writeCommitGraph = true
+
 [tag]
 	sort = -version:refname
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

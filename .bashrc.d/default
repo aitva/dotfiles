@@ -2,8 +2,12 @@
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# add the .bin folder to the path
-export PATH=$HOME/.bin:$PATH
-
 # force UTF-8 for GNOME shell
 export LANG=en_US.UTF-8
+
+# export-env export all variables from an env file into the current shell.
+export-env() {
+    set -o allexport
+    source $1
+    set +o allexport
+}

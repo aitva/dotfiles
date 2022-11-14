@@ -1,5 +1,4 @@
 # This file contains environment variables for Golang development.
-export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 export GOPRIVATE="gitlab.com/gryzzlybot/*,gitlab.com/aitva/*"

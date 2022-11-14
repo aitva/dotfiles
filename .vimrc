@@ -150,5 +150,8 @@ highlight PmenuSel ctermbg=darkcyan ctermfg=black
 
 " Enable copy in hterm / Secure Shell.
 if !empty($HTERM)
-    vmap <C-y> y:call osc52#send(getreg('"'))<cr>
+    vmap <C-y> y:call osc52#send(getreg('"'))<CR>
+endif
+if executable('wl-copy')
+    xnoremap <silent> <C-y> :w !wl-copy<CR><CR>
 endif
