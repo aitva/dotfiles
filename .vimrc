@@ -38,7 +38,7 @@ call plug#end()
 
 " Force 256 colors and dark background.
 set t_Co=256
-"set bg=dark
+set bg=dark
 
 " Configure Markdown scheme
 let g:vim_markdown_folding_disabled=1
