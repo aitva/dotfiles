@@ -4,5 +4,6 @@ export BOT_DEBUG=1
 export REPORT_DEBUG=1
 
 export API_DB_PASS=api
+export API_DB_TENANT_PASS=api-tenant
 export BOT_DB_PASS=bot
 export EAPI_DB_PASS=eapi

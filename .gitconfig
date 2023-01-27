@@ -1,16 +1,6 @@
 [user]
 	name = aitva
 	email = aitva@pm.me
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNLO2799Ru+W/qLPXcPCOhVujNqIBp7dFCNrXyijT5d
-
-[gpg]
-	format = ssh
-
-[gpg "ssh"]
-	program = "/opt/1Password/op-ssh-sign"
-
-[commit]
-	gpgsign = true
 
 [url "git@gitlab.com:gryzzlybot/"]
 	insteadOf = https://gitlab.com/gryzzlybot/
@@ -39,7 +29,8 @@
 	writeCommitGraph = true
 
 [tag]
-	sort = -version:refname
+    sort = -version:refname
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
