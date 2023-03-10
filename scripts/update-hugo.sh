@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALLDIR="$HOME/.bin"
+INSTALLDIR="$HOME/.local/bin"
 BINARYPATH="$INSTALLDIR/hugo"
 
 VERSION=$1
@@ -10,7 +10,7 @@ if [ -z $VERSION ]; then
 fi
 
 curl --location --silent \
-    "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz" \
+	"https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_linux-amd64.tar.gz" \
     -o hugo.tgz
 if [ -f $BINARYPATH ]; then
     rm $BINARYPATH

@@ -41,3 +41,13 @@ To import file from `.bashrc.d` edit `.bashrc` and add:
 . ~/.bashrc.d/default
 . ~/.bashrc.d/go
 ```
+
+To import all files under `.bashrc.d` edit `.bashrc` and add:
+
+```bash
+if [ -d "$HOME/.bashrc.d" ]; then
+	for f in $HOME/.bashrc.d/*; do
+		. $f
+	done
+fi
+```

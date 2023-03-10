@@ -1,0 +1,14 @@
+kitty-set-theme() {
+    # Persist THEME between reboot.
+    echo "export THEME=$1" > $HOME/.bashrc.d/kitty-theme
+    export THEME=$1
+
+    THEME_NAME="Default"
+    if [ "$1" = "light" ]; then
+        THEME_NAME="Alabaster"
+    fi
+    kitty +kitten themes --reload-in=all ${THEME_NAME}
+}
+
+alias kitty-light='kitty-set-theme "light"'
+alias kitty-dark='kitty-set-theme "dark"'

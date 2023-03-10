@@ -1,0 +1,33 @@
+" Install vim-plug. Fail if curl is missing.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Install plugins
+call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-fugitive'
+" Syntax highlighting
+Plug 'leafgarland/typescript-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+Plug 'b0o/builder.vim'
+Plug 'b0o/quicktemplate.vim'
+call plug#end()
+
+" Configure ALE.
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+" let g:ale_hover_to_floating_preview = 1
+" let g:ale_floating_preview = 1
+" let g:ale_detail_to_floating_preview = 1
+
+" Insert UUID using :UUID.
+command UUID :normal i<C-r>=system('uuidgen')[:-2]<CR><Esc>

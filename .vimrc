@@ -7,6 +7,8 @@ set noswapfile
 
 " Enable keyboard arrows when using tmux
 " https://superuser.com/a/402084
+"
+" TODO: remove if kitty is working
 if &term =~ '^screen'
   " tmux will send xterm-style keys when its xterm-keys option is on
   execute "set <xUp>=\e[1;*A"
@@ -15,30 +17,12 @@ if &term =~ '^screen'
   execute "set <xLeft>=\e[1;*D"
 endif
 
-" Install vim-plug. Fail if curl is missing.
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" Install plugins
-call plug#begin('~/.vim/plugged')
-Plug 'dense-analysis/ale'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-fugitive'
-" Syntax highlighting
-Plug 'leafgarland/typescript-vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'b0o/builder.vim'
-Plug 'b0o/quicktemplate.vim'
-call plug#end()
 
 " Force 256 colors and dark background.
 set t_Co=256
-"set bg=dark
+if $THEME == "dark"
+    set bg=dark
+endif
 
 " Configure Markdown scheme
 let g:vim_markdown_folding_disabled=1
@@ -90,19 +74,6 @@ inoremap <C-c> <ESC>
 " Ex mode is fucking dumb.
 nnoremap Q <Nop>
 
-" Insert UUID using :UUID.
-command UUID :normal i<C-r>=system('uuidgen')[:-2]<CR><Esc>
-
-" Configure ALE.
-let g:ale_linters_explicit = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_save = 1
-let g:ale_fix_on_save = 1
-" let g:ale_hover_to_floating_preview = 1
-" let g:ale_floating_preview = 1
-" let g:ale_detail_to_floating_preview = 1
-
 " Preferences for various file formats
 autocmd FileType c setlocal noet ts=4 sw=4 tw=80
 autocmd FileType h setlocal noet ts=4 sw=4 tw=80
@@ -149,9 +120,12 @@ highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=darkcyan ctermfg=black
 
 " Enable copy in hterm / Secure Shell.
-if !empty($HTERM)
+if !empty($HTERM) || $TERM == "xterm-kitty"
     vmap <C-y> y:call osc52#send(getreg('"'))<CR>
 endif
-if executable('wl-copy')
-    xnoremap <silent> <C-y> :w !wl-copy<CR><CR>
+
+" Enable Plug if present.
+let $VIMPLUG = $HOME . "/.vimrc-plug"
+if filereadable($VIMPLUG)
+    source $VIMPLUG
 endif
