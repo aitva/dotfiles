@@ -118,6 +118,7 @@ highlight pythonConditional ctermfg=darkcyan
 highlight pythonBuiltin ctermfg=darkcyan
 highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=darkcyan ctermfg=black
+highlight Visual term=reverse cterm=reverse guibg=Grey
 
 " Enable copy in hterm / Secure Shell.
 if !empty($HTERM) || $TERM == "xterm-kitty"
