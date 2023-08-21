@@ -14,3 +14,4 @@ alias kitty-light='kitty-set-theme "light"'
 alias kitty-dark='kitty-set-theme "dark"'
 alias icat="kitty +kitten icat"
 alias ksh="kitty +kitten ssh"
+alias ksh-no-check="kitty +kitten ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
