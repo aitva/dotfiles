@@ -15,8 +15,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'preservim/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
-Plug 'b0o/builder.vim'
-Plug 'b0o/quicktemplate.vim'
+"Plug 'b0o/builder.vim'
+"Plug 'b0o/quicktemplate.vim'
 call plug#end()
 
 " Configure ALE.

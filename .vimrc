@@ -5,29 +5,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Enable keyboard arrows when using tmux
-" https://superuser.com/a/402084
-"
-" TODO: remove if kitty is working
-if &term =~ '^screen'
-  " tmux will send xterm-style keys when its xterm-keys option is on
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
-endif
-
-
 " Force 256 colors and dark background.
 set t_Co=256
-if $THEME == "dark"
-    set bg=dark
-endif
 
-" Configure Markdown scheme
-"let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_folding_level = 6
-let g:vim_markdown_frontmatter=1
+" Improves Kitty support if present.
+let $VIMKITTY = $HOME . "/.vimrc-kitty"
+if filereadable($VIMKITTY)
+    source $VIMKITTY
+endif
 
 " Force utf-8 encoding.
 set encoding=utf-8
@@ -75,6 +60,11 @@ inoremap <C-c> <ESC>
 " Ex mode is fucking dumb.
 nnoremap Q <Nop>
 
+" Configure Markdown scheme
+"let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_level = 6
+let g:vim_markdown_frontmatter=1
+
 " Preferences for various file formats
 autocmd FileType c setlocal noet ts=4 sw=4 tw=80
 autocmd FileType h setlocal noet ts=4 sw=4 tw=80
@@ -83,12 +73,13 @@ autocmd FileType go setlocal noet ts=4 sw=4
 autocmd FileType sh setlocal noet ts=4 sw=4
 autocmd BufRead,BufNewFile *.js setlocal et ts=2 sw=2
 autocmd BufRead,BufNewFile Caddyfile* setlocal noet ts=4 sw=4
-autocmd FileType html setlocal et ts=2 sw=2
+autocmd FileType html setlocal et ts=4 sw=4
 autocmd FileType yaml setlocal et ts=2 sw=2
-autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
+autocmd FileType markdown setlocal tw=80 et ts=8 sw=2 smarttab nofoldenable
 autocmd FileType markdown_wrap setlocal et ts=2 sw=2 columns=80 linebreak wrap cc& tw&
 autocmd FileType text setlocal tw=80
 autocmd FileType typescript setlocal et ts=2 sw=2
+autocmd FileType vue setlocal et ts=2 sw=2
 autocmd FileType python setlocal et ts=4 sw=4
 
 " Colorscheme
