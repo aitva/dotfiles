@@ -15,7 +15,11 @@
 	path = ~/dev/gryzzly/.gitconfig
 
 [pull]
-	rebase = true
+    rebase = true
+
+[merge]
+    ff = no
+    commit = no
 
 [core]
 	quotePath = false
@@ -35,19 +39,26 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
+    required = true
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [diff "jupyternotebook"]
-	command = git-nbdiffdriver diff
+    command = git-nbdiffdriver diff
+
 [merge "jupyternotebook"]
 	driver = git-nbmergedriver merge %O %A %B %L %P
-	name = jupyter notebook merge driver
+    name = jupyter notebook merge driver
+
 [difftool "nbdime"]
-	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+    cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+
 [difftool]
-	prompt = false
+    prompt = false
+
 [mergetool "nbdime"]
-	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
 [mergetool]
 	prompt = false
