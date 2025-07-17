@@ -1,3 +1,6 @@
+" Run the following command to install the required tools:
+"   npm install --global typescript eslint
+
 let b:ale_linters = ['tsserver', 'eslint']
 let b:ale_fixers = ['eslint']
 let b:ale_completion_enabled = 1

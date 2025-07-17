@@ -1,3 +1,6 @@
+" Run the following command to install the required tools:
+"   npm install --global vls
+
 let b:ale_linters = ['vls', 'eslint']
 let b:ale_fixers = ['eslint']
 let b:ale_completion_enabled = 1
